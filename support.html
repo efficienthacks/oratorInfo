@@ -1,12 +1,646 @@
-<!DOCTYPE html><!--[if lt IE 7 ]><html itemscope itemtype="https://schema.org/" id="ie6" class="ie" lang="en-US"><![endif]--><!--[if IE 7 ]>   <html itemscope itemtype="https://schema.org/" id="ie7" class="ie" lang="en-US"><![endif]--><!--[if IE 8 ]>   <html itemscope itemtype="https://schema.org/" id="ie8" class="ie" lang="en-US"><![endif]--><!--[if IE 9 ]>   <html itemscope itemtype="https://schema.org/" id="ie9" class="ie" lang="en-US"><![endif]--><!--[if gt IE 9]><!--><html itemscope itemtype="https://schema.org/" lang="en-US"><!--<![endif]--><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0"><meta content="yes" name="apple-mobile-web-app-capable"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="apple-touch-icon" sizes="57x57" href="/img/icons/apple-touch-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="/img/icons/apple-touch-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="/img/icons/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="/img/icons/apple-touch-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="/img/icons/apple-touch-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="/img/icons/apple-touch-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="/img/icons/apple-touch-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="/img/icons/apple-touch-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon-180x180.png"><link rel="icon" type="image/png" href="/img/icons/favicon-32x32.png" sizes="32x32"><link rel="icon" type="image/png" href="/img/icons/android-chrome-192x192.png" sizes="192x192"><link rel="icon" type="image/png" href="/img/icons/favicon-96x96.png" sizes="96x96"><link rel="icon" type="image/png" href="/img/icons/favicon-16x16.png" sizes="16x16"><link rel="manifest" href="/img/icons/manifest.json"><link rel="mask-icon" href="/img/icons/safari-pinned-tab.svg"><meta name="msapplication-TileColor" content="#da532c"><meta name="msapplication-TileImage" content="/mstile-144x144.png"><meta name="theme-color" content="#ffffff"><!-- SEARCH --><meta name="author" content="My Orator By Ehacks LLC"><meta name="description" content=""><!-- TWITTER --><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@myOrator"><meta name="twitter:creator" content="@efficientHacks"><meta name="twitter:title" content="My Orator"><meta name="twitter:description" content="Your articles synced to your podcast app"><meta name="twitter:image:src" content="https://orator.ehacks.co/images/fbSharing.jpg"><!-- FACEBOOK --><meta property="og:site_name" content="My Orator"><meta property="og:url" content="http://myorator.net"><meta property="og:type" content="website"><meta property="og:title" content="Add articles from your desktop, listen on your phone"><meta property="og:description" content="Long Commute?  Reading not convenient?  Listen to your articles instead with My Orator!"><meta property="og:image" content="https://orator.ehacks.co/images/fbSharing.jpg"><meta property="fb:app_id" content=""><meta property="fb:admins" content=""><!-- G+ --><meta itemprop="name" content="My Orator"><meta itemprop="description" content="Long Commute?  Reading not convenient?  Listen to your articles instead with My Orator!"><meta itemprop="image" content="https://orator.ehacks.co/images/fbSharing.jpg"><title>My Orator | Articles to Speech</title><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" media="screen" charset="utf-8"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><link rel="stylesheet" type="text/css" href="plugins/aos/aos.css"><link rel="stylesheet" type="text/css" href="css/styles.css"><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-112924598-1"></script><script>window.dataLayer = window.dataLayer || [];
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html itemscope itemtype="https://schema.org/" id="ie6" class="ie" lang="en-US"><![endif]-->
+<!--[if IE 7 ]>   <html itemscope itemtype="https://schema.org/" id="ie7" class="ie" lang="en-US"><![endif]-->
+<!--[if IE 8 ]>   <html itemscope itemtype="https://schema.org/" id="ie8" class="ie" lang="en-US"><![endif]-->
+<!--[if IE 9 ]>   <html itemscope itemtype="https://schema.org/" id="ie9" class="ie" lang="en-US"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html itemscope itemtype="https://schema.org/" lang="en-US">
+<!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<link rel="apple-touch-icon" sizes="57x57" href="/img/icons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/icons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/icons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/icons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/icons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/icons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/icons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/icons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/img/icons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/icons/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/img/icons/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/img/icons/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/img/icons/manifest.json">
+<link rel="mask-icon" href="/img/icons/safari-pinned-tab.svg">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<!-- SEARCH -->
+<meta name="author" content="My Orator By Ehacks LLC">
+<meta name="description" content="">
+
+<!-- TWITTER -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@myOrator">
+<meta name="twitter:creator" content="@efficientHacks">
+<meta name="twitter:title" content="My Orator">
+<meta name="twitter:description" content="Your articles synced to your podcast app">
+<meta name="twitter:image:src" content="https://orator.ehacks.co/images/fbSharing.jpg">
+
+<!-- FACEBOOK -->
+<meta property="og:site_name" content="My Orator">
+<meta property="og:url" content="http://myorator.net">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Add articles from your desktop, listen on your phone">
+<meta property="og:description" content="Long Commute?  Reading not convenient?  Listen to your articles instead with My Orator!">
+<meta property="og:image" content="https://orator.ehacks.co/images/fbSharing.jpg">
+<meta property="fb:app_id" content="">
+<meta property="fb:admins" content="">
+
+<!-- G+ -->
+<meta itemprop="name" content="My Orator">
+<meta itemprop="description" content="Long Commute?  Reading not convenient?  Listen to your articles instead with My Orator!">
+<meta itemprop="image" content="https://orator.ehacks.co/images/fbSharing.jpg">
+
+
+  <title>My Orator | Articles to Speech</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" media="screen" charset="utf-8">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="plugins/aos/aos.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112924598-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'UA-112924598-1');</script></head><body><style>body { padding-top: 70px; }</style><nav class="navbar navbar-default navbar-fixed-top" role="navigation"><!-- Brand and toggle get grouped for better mobile display --><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse-1" aria-expanded="false"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button> <img class="navbar-brand" src="img/icons/Orator50x50.png"> <a class="navbar-brand" href="index.html" style="color:#000">My Orator</a></div><!-- Collect the nav links, forms, and other content for toggling --><div class="collapse navbar-collapse navbar-top-collapse" id="bs-navbar-collapse-1"><ul class="nav navbar-nav navbar-right"><li><a href="features.html"><i class="material-icons">new_releases</i> Benefits</a></li><li><a href="chromeLanding.html"><small class="label label-success">New!</small> Chrome Extension</a></li><li><a href="pricing.html"><i class="material-icons">monetization_on</i> Pricing</a></li><!--
+  gtag('config', 'UA-112924598-1');
+</script>
+
+
+   
+
+</head>
+<body>
+  
+<style>
+  body { padding-top: 70px; }
+</style>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <img class="navbar-brand" src="img/icons/Orator50x50.png" />
+      <a class="navbar-brand" href="index.html" style="color:#000">
+         My Orator
+      </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-top-collapse" id="bs-navbar-collapse-1">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li>
+          <a href="features.html">
+            <i class="material-icons">new_releases</i> Benefits
+          </a>
+        </li>
+
+        <li>
+          <a href="chromeLanding.html">
+            <small class="label label-success">New!</small> Chrome Extension
+          </a>
+        </li>
+        
+        <li>
+          <a href="pricing.html">
+          <i class="material-icons">monetization_on</i> Pricing
+        </a>
+        </li>
+        <!--
         <li>
           <a href="faq.html">
             <i class="material-icons">question_answer</i>
             FAQs
           </a>
         </li>
-      --><li><a href="signup.html"><i class="material-icons">supervisor_account</i> Sign up</a></li></ul></div><!-- /.navbar-collapse --></div><!-- container --></nav><div id="barba-wrapper"><div class="barba-container"><div id="support-page" class="page"><div class="section-header"><div class="container"><div class="row"><div class="col-md-12"><h2>How can we help?<br><small>Browse our knowledge base to find solutions to common problems</small></h2><div id="custom-search-input"><div class="input-group col-md-10 col-md-offset-1"><input type="text" class="input-lg form-control" placeholder="Have a question? Ask here..."> <span class="input-group-btn"><span class="btn btn-default btn-lg"><span class="fa fa-search"></span> Search</span></span></div></div></div><!-- search input--></div></div></div><section class="categories-area"><div class="container"><div class="row"><div class="col-md-12"><div class="additional-header"><h3>Browse By Categories</h3></div></div></div><div class="row"><div class="col-lg-4 col-md-4"><div class="widget widget-cream"><i class="support-icon-main fa fa-users"></i><h3 class="widget-title">Privacy Settings</h3><ul class="list"><li><a href="#">How to change you privacy settings?</a></li><li><a href="#">How to reset your password?</a></li><li><a href="#">How to change your username?</a></li></ul><a href="#" class="btn btn-sm btn-bordered btn-primary">12 more articles &rarr;</a></div></div><div class="col-lg-4 col-md-4"><div class="widget widget-blue"><i class="support-icon-main fa fa-money"></i><h3 class="widget-title">Billing Settings</h3><ul class="list"><li><a href="#">Can I pay with Paypal?</a></li><li><a href="#">Do you accept Mastercard?</a></li><li><a href="#">How to change my billing address?</a></li></ul><a href="#" class="btn btn-sm btn-bordered btn-white">4 more articles &rarr;</a></div></div><div class="col-lg-4 col-md-4"><div class="widget widget-red"><i class="support-icon-main fa fa-cogs"></i><h3 class="widget-title">Getting Started</h3><ul class="list"><li><a href="#">How to create your first widget?</a></li><li><a href="#">How to add users to your account?</a></li><li><a href="#">How to set up Javascript widget?</a></li></ul><a href="#" class="btn btn-sm btn-bordered btn-white">5 more articles &rarr;</a></div></div></div></div></section><section class="articles-area"><div class="container"><div class="row"><div class="col-md-4 col-lg-4"><div class="row"><div class="col-md-12"><div class="additional-header"><h3>Latest Articles</h3></div></div><div class="col-md-12 col-lg-12"><div class="list-group support-articles-list"><a href="#" class="list-group-item"><i class="fa fa-star"></i> How to change you privacy settings? </a><a href="#" class="list-group-item"><i class="fa fa-user"></i> How to change your username? </a><a href="#" class="list-group-item"><i class="fa fa-cogs"></i> How to add users to your account? </a><a href="#" class="list-group-item"><i class="fa fa-code"></i> How to set up Javascript widget? </a><a href="#" class="list-group-item"><i class="fa fa-briefcase"></i> How to change your username?</a></div></div></div></div><div class="col-md-4 col-lg-4"><div class="row"><div class="col-md-12"><div class="additional-header"><h3>Popular Articles</h3></div></div><div class="col-md-12 col-lg-12"><div class="list-group support-articles-list"><a href="#" class="list-group-item"><i class="fa fa-star"></i> How to change you privacy settings? </a><a href="#" class="list-group-item"><i class="fa fa-user"></i> How to change your username? </a><a href="#" class="list-group-item"><i class="fa fa-cogs"></i> How to add users to your account? </a><a href="#" class="list-group-item"><i class="fa fa-code"></i> How to set up Javascript widget? </a><a href="#" class="list-group-item"><i class="fa fa-briefcase"></i> How to change your username?</a></div></div></div></div><div class="col-md-4 col-lg-4"><div class="row"><div class="col-md-12"><div class="additional-header"><h3>Get Help</h3></div><div class="panel panel-primary"><div class="panel-body"><h4>Didn't find the answer that you were looking for?</h4><p class="lead">Drop us an <a href="#">email</a> or fill out our <a href="contact.html">contact form</a> and we'll get back to you shortly.</p></div></div></div></div></div></div></div></section><section class="contact-form-area"><div class="container"><div class="row"><div class="col-md-12"><div class="additional-header"><h3>Fill out this form</h3></div><p class="lead">Our support staff will get in touch with you as soon as possible.<br>Holidays & weekends may take extra time.</p><form id="contact-us-form"><div class="row"><div class="col-md-5"><div class="form-group"><label for="fname">Name</label><input type="text" name="fname" id="fname" class="form-control"></div><div class="form-group"><label for="email">Email <sup>*</sup></label><input type="email" name="email" id="email" class="form-control"></div><div class="form-group"><label for="subject">Subject <sup>*</sup></label><input type="text" name="subject" id="subject" class="form-control"></div></div><div class="col-md-7"><div class="form-group"><label for="message">Message <sup>*</sup></label><textarea name="message" id="message" class="form-control" cols="30" rows="10"></textarea></div></div></div><div class="actions"><input type="submit" class="btn btn-primary btn-lg" value="Send Message"></div></form></div></div></div></section><section id="horizontal-features"><div class="container"><div class="row"><div class="col-md-4 feature-item"><div class="image"><img src="img/smallicons-svg/www.svg" alt=""></div><div class="text"><h4>Built with Bootstrap 3</h4><p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, nam, accusamus</p></div></div><div class="col-md-4 feature-item"><div class="image"><img src="img/smallicons-svg/eye.svg" alt=""></div><div class="text"><h4>Easily Custmizable</h4><p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, nam, accusamus</p></div></div><div class="col-md-4 feature-item"><div class="image"><img src="img/smallicons-svg/store.svg" alt=""></div><div class="text"><h4>20+ Page Options</h4><p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, nam, accusamus</p></div></div></div><!-- /.row --></div><!-- /.container --></section></div></div></div><footer id="main-footer"><div class="container menu-container"><div class="row"><div class="col-sm-12 col-xs-12"><div class="row"><div class="col-sm-3 col-xs-6 footer-menu"><h3><span>Overview</span></h3><ul class="unstyled"><li><a href="http://orator.azurewebsites.net/Articles"><i class="material-icons">home</i> Login to My Orator</a></li><li><a href="features.html"><i class="material-icons">new_releases</i> Benefits</a></li><li><a href="pricing.html#"><i class="material-icons">monetization_on</i> Pricing</a></li></ul></div><!-- footer menu --><div class="col-sm-3 col-xs-6 footer-menu"><h3><span>Info</span></h3><ul class="unstyled"><li><a href="https://medium.com/@efficientHacks/my-orator-general-faqs-f50e4745a599"><i class="material-icons">question_answer</i> FAQ (Medium.com)</a></li><li><a href="https://efficienthacks.com/privacy"><i class="material-icons">question_answer</i> Privacy</a></li><li><a href="https://efficienthacks.com/terms"><i class="material-icons">question_answer</i> Terms and Conditions</a></li></ul></div><!-- footer menu --><div class="col-sm-3 hidden-xs footer-menu"><h3><span>Reach out</span></h3><ul class="unstyled"><li><a href="https://medium.com/efficienthacks"><i class="material-icons">border_color</i> Blog (Medium.com)</a></li><li><a href="https://facebook.com/myorator"><i class="fa fa-facebook"></i> Facebook</a></li><li><a href="https://twitter.com/myorator"><i class="fa fa-twitter"></i> Twitter</a></li></ul></div></div></div></div></div><div class="copyright-footer"><div class="container"><div class="row"><div class="col-md-12">My Orator. Copyright &copy; All Rights Reserved<div class="pull-right hidden-xs"><a href="https://efficientHacks.com" target="_blank" title="Bootstrap Templates">EfficientHacks</a></div></div></div></div></div></footer><div class="modal fade zoom-out" id="purchaseModal"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title">Modal example</h4></div><div class="modal-body"><p class="lead">This is a modal with costom transitions. You can choose from 'zoom-out' 'move-horizontal' & 'newspaper-effect'.</p><p>Below are some are some other home page variants that you can use -</p><ul><li><a href="index.html">Default home page with 2</a></li><li><a href="index-2.html">Home page for software products</a></li><li><a href="index-3.html">Home page for Mobile apps</a></li></ul></div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div><!-- /.modal-content --></div><!-- /.modal-dialog --></div><!-- /.modal --><script src="https://code.jquery.com/jquery-2.2.4.min.js"></script><script src="scripts/vendor.js"></script><script type="text/javascript" src="js/main.js"></script></body></html>
+      -->
+        
+        <li> 
+          <a href="signup.html">
+            <i class="material-icons">supervisor_account</i>
+            Sign up
+          </a>
+        </li>
+
+      </ul>
+
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- container -->
+</nav>
+
+
+
+  <div id="barba-wrapper">
+    <div class="barba-container">
+      
+<div id="support-page" class="page">
+
+  <div class="section-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>
+            How can we help? <br>
+            <small>
+              Browse our knowledge base to find solutions to common problems
+            </small>
+          </h2>
+
+
+          <div id="custom-search-input">
+            <div class="input-group col-md-10 col-md-offset-1">
+              <input type="text" class="input-lg form-control" placeholder="Have a question? Ask here..." />
+              <span class="input-group-btn">
+                <span class="btn btn-default btn-lg">
+                  <span class="fa fa-search"></span> Search
+                </span>
+              </span>
+            </div>
+          </div>
+        </div><!-- search input-->
+
+      </div>
+    </div>
+  </div>
+
+  <section class="categories-area">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="additional-header">
+            <h3>Browse By Categories</h3>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-4">
+          <div class="widget widget-cream">
+            <i class="support-icon-main fa fa-users"></i>
+
+            <h3 class="widget-title">
+              Privacy Settings
+            </h3>
+
+            <ul class="list">
+              <li>
+                <a href="#">How to change you privacy settings?</a>
+              </li>
+
+              <li>
+                <a href="#">How to reset your password?</a>
+              </li>
+
+              <li>
+                <a href="#">How to change your username?</a>
+              </li>
+            </ul>
+
+            <a href="#" class="btn btn-sm btn-bordered btn-primary">12 more articles &rarr;</a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4">
+          <div class="widget widget-blue">
+            <i class="support-icon-main fa fa-money"></i>
+
+            <h3 class="widget-title">
+              Billing Settings
+            </h3>
+
+            <ul class="list">
+              <li>
+                <a href="#">Can I pay with Paypal?</a>
+              </li>
+
+              <li>
+                <a href="#">Do you accept Mastercard?</a>
+              </li>
+
+              <li>
+                <a href="#">How to change my billing address?</a>
+              </li>
+            </ul>
+
+            <a href="#" class="btn btn-sm btn-bordered btn-white">4 more articles &rarr;</a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4">
+          <div class="widget widget-red">
+            <i class="support-icon-main fa fa-cogs"></i>
+
+            <h3 class="widget-title">
+              Getting Started
+            </h3>
+
+            <ul class="list">
+              <li>
+                <a href="#">How to create your first widget?</a>
+              </li>
+
+              <li>
+                <a href="#">How to add users to your account?</a>
+              </li>
+
+              <li>
+                <a href="#">How to set up Javascript widget?</a>
+              </li>
+            </ul>
+
+            <a href="#" class="btn btn-sm btn-bordered btn-white">5 more articles &rarr;</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="articles-area">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-4 col-lg-4">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="additional-header">
+                <h3>Latest Articles</h3>
+              </div>
+            </div>
+
+            <div class="col-md-12 col-lg-12">
+
+              <div class="list-group support-articles-list">
+                <a href="#" class="list-group-item">
+                  <i class="fa fa-star"></i> How to change you privacy settings?
+                </a>
+                <a href="#" class="list-group-item">
+                  <i class="fa fa-user"></i> How to change your username?
+                </a>
+                <a href="#" class="list-group-item">
+                  <i class="fa fa-cogs"></i> How to add users to your account?
+                </a>
+
+                <a href="#" class="list-group-item">
+                  <i class="fa fa-code"></i> How to set up Javascript widget?
+                </a>
+                <a href="#" class="list-group-item">
+                  <i class="fa fa-briefcase"></i> How to change your username?
+                </a>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-lg-4">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="additional-header">
+                <h3>Popular Articles</h3>
+              </div>
+            </div>
+
+            <div class="col-md-12 col-lg-12">
+
+              <div class="list-group support-articles-list">
+                <a href="#" class="list-group-item">
+                  <i class="fa fa-star"></i> How to change you privacy settings?
+                </a>
+                <a href="#" class="list-group-item">
+                  <i class="fa fa-user"></i> How to change your username?
+                </a>
+                <a href="#" class="list-group-item">
+                  <i class="fa fa-cogs"></i> How to add users to your account?
+                </a>
+
+                <a href="#" class="list-group-item">
+                  <i class="fa fa-code"></i> How to set up Javascript widget?
+                </a>
+                <a href="#" class="list-group-item">
+                  <i class="fa fa-briefcase"></i> How to change your username?
+                </a>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-lg-4">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="additional-header">
+                <h3>Get Help</h3>
+              </div>
+
+              <div class="panel panel-primary">
+                <div class="panel-body">
+                  <h4>Didn't find the answer that you were looking for?</h4>
+
+                  <p class="lead">
+                    Drop us an <a href="#">email</a> or fill out our <a href="contact.html">contact form</a> and we'll get back to you shortly.
+                  </p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="contact-form-area">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="additional-header">
+  <h3>
+    Fill out this form
+  </h3>
+</div>
+
+<p class="lead">
+  Our support staff will get in touch with you as soon as possible. <br> Holidays & weekends may take extra time.
+</p>
+
+<form id="contact-us-form">
+  <div class="row">
+    <div class="col-md-5">
+      <div class="form-group">
+        <label for="fname">Name</label>
+        <input type="text" name="fname" id="fname" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email <sup>*</sup></label>
+        <input type="email" name="email" id="email" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="subject">Subject <sup>*</sup></label>
+        <input type="text" name="subject" id="subject" class="form-control">
+      </div>
+    </div>
+
+    <div class="col-md-7">
+      <div class="form-group">
+        <label for="message">Message <sup>*</sup></label>
+        <textarea name="message" id="message" class="form-control" cols="30" rows="10"></textarea>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="actions">
+    <input type="submit" class="btn btn-primary btn-lg" value="Send Message">
+  </div>
+</form>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="horizontal-features">
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-4 feature-item">
+        <div class="image">
+          <img src="img/smallicons-svg/www.svg" alt="">
+        </div>
+
+        <div class="text">
+          <h4>Built with Bootstrap 3</h4>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, nam, accusamus</p>
+        </div>
+
+      </div>
+      <div class="col-md-4 feature-item">
+        <div class="image">
+          <img src="img/smallicons-svg/eye.svg" alt="">
+        </div>
+
+        <div class="text">
+          <h4>Easily Custmizable</h4>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, nam, accusamus</p>
+        </div>
+
+      </div>
+      <div class="col-md-4 feature-item">
+        <div class="image">
+          <img src="img/smallicons-svg/store.svg" alt="">
+        </div>
+
+        <div class="text">
+          <h4>20+ Page Options</h4>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, nam, accusamus</p>
+        </div>
+
+      </div>
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+</section>
+
+
+
+
+</div>
+
+
+    </div>
+  </div>
+
+  
+<footer id="main-footer">
+  <div class="container menu-container">
+    <div class="row">
+      <div class="col-sm-12 col-xs-12">
+        <div class="row">
+          <div class="col-sm-3 col-xs-6 footer-menu">
+            <h3><span>Overview</span></h3>
+            <ul class="unstyled">
+              <li>
+                <a href="http://orator.azurewebsites.net/Articles">
+                  <i class="material-icons">home</i>
+                  Login to My Orator
+                </a>
+              </li>
+              <li>
+                <a href="features.html">
+                  <i class="material-icons">new_releases</i>
+                  Benefits
+                </a>
+              </li>
+              <li>
+                <a href="pricing.html#">
+                  <i class="material-icons">monetization_on</i>
+                  Pricing
+                </a>
+              </li>
+
+            </ul>
+          </div><!-- footer menu -->
+
+          <div class="col-sm-3 col-xs-6 footer-menu">
+            <h3><span>Info</span></h3>
+            <ul class="unstyled">
+              
+              <li>
+                <a href="https://medium.com/@efficientHacks/my-orator-general-faqs-f50e4745a599">
+                  <i class="material-icons">question_answer</i>
+                  FAQ (Medium.com)
+                </a>
+              </li>
+
+              <li>
+                  <a href="https://efficienthacks.com/privacy">
+                    <i class="material-icons">question_answer</i>
+                    Privacy
+                  </a>
+                </li>
+
+                <li>
+                    <a href="https://efficienthacks.com/terms">
+                      <i class="material-icons">question_answer</i>
+                      Terms and Conditions
+                    </a>
+                  </li>
+            </ul>
+          </div><!-- footer menu -->
+
+          <div class="col-sm-3 hidden-xs footer-menu">
+            <h3><span>Reach out</span></h3>
+            <ul class="unstyled">
+              <li>
+                <a href="https://medium.com/efficienthacks">
+                  <i class="material-icons">border_color</i>
+                  Blog (Medium.com)
+                </a>
+              </li>
+              <li>
+                <a href="https://facebook.com/myorator">
+                  <i class="fa fa-facebook"></i>
+                  Facebook
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/myorator">
+                  <i class="fa fa-twitter"></i>
+                  Twitter
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+  <div class="copyright-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          My Orator. Copyright &copy; All Rights Reserved
+
+          <div class="pull-right hidden-xs">
+            <a href="https://efficientHacks.com" target="_blank" title="Bootstrap Templates">EfficientHacks</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<div class="modal fade zoom-out" id="purchaseModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Modal example</h4>
+      </div>
+      <div class="modal-body">
+        <p class="lead">
+          This is a modal with costom transitions. You can choose from 'zoom-out' 'move-horizontal' & 'newspaper-effect'.
+        </p>
+
+        <p>
+          Below are some are some other home page variants that you can use -
+        </p>
+
+        <ul>
+          <li>
+            <a href="index.html">
+              Default home page with 2
+            </a>
+          </li>
+          <li>
+            <a href="index-2.html">
+              Home page for software products
+            </a>
+          </li>
+          <li>
+            <a href="index-3.html">
+              Home page for Mobile apps
+            </a>
+          </li>
+        </ul>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+
+   
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+  <script src="scripts/vendor.js"></script>
+
+  <script type="text/javascript" src="js/main.js"></script>
+
+
+
+   
+</body>
+</html>
